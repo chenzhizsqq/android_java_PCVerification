@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_shape">
+        <ImageView
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/universalkey_logo"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/VersionText"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:textColor="#ffffff"
+            />
+
+    </RelativeLayout>
+</layout>

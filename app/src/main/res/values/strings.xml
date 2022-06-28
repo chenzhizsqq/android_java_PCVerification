@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Universal Key</string>
+
+    <string name="lock_not_login">スマホアプリが認証されていません\nアイコンをタップして認証してください</string>
+    <string name="lock_bluetooth">スマホアプリは認証されています</string>
+<!--    <string name="lock_not_connect">PC-TEST と切断中</string>-->
+    <string name="lock_not_use">利用停止</string>
+    <string name="lock_not_bind">PCで初期設定を行ってください</string>
+
+<!--    <string name="lock_overextend">範囲外</string>-->
+
+    <string name="msg_not_use_title">利用停止状態です。</string>
+    <string name="msg_not_use_content">管理者に利用停止状態に変更されました。</string>
+    <string name="msg_bluetooth_use_title">利用停止解除状態です。</string>
+    <string name="msg_bluetooth_use_content">管理者に利用停止解除状態に変更されました。</string>
+    <string name="msg_pwd_setting_title">画面ロックが設定されていません</string>
+    <string name="msg_pwd_setting">続行するには端末の画面ロックを設定してください。</string>
+    <string name="msg_user_not_login">ユーザーが未登録です</string>
+    <string name="msg_tenant_not_login">テナントが未登録です</string>
+    <string name="msg_get_information_failed_continue">"情報取得に失敗しました\n前回取得情報で処理を継続します\n"</string>
+    <string name="msg_get_information_failed_close">"情報取得に失敗しました\nアプリを再度起動してください"</string>
+
+    <string name="notify_channel">状態変更メッセージ</string>
+    <string name="loading">読み込み中...</string>
+
+    <string name="dialog_cancel">cancel</string>
+    <string name="dialog_ok">ok</string>
+
+    <string name="msg_bluetooth_not_exist">Bluetooth モジュールは存在しません。</string>
+    <string name="msg_bluetooth_ble_not_exist">BLE モジュールは存在しません。</string>
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/elasticityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp">
+
+        <ImageView
+            android:id="@+id/elasticityView"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_above="@+id/shadowImageView"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"
+            android:src="@drawable/icon_elasticity_loading_view_circle"/>
+
+        <ImageView
+            android:id="@+id/shadowImageView"
+            android:layout_width="20dp"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/icon_elasticity_loading_view_shadow"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="加载中..."
+        android:textSize="14sp"/>
+
+</LinearLayout>

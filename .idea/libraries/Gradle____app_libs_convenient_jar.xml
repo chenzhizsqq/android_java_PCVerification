@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/convenient.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/convenient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

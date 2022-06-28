@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "114908354816",
+    "firebase_url": "https://authlocker-987e2.firebaseio.com",
+    "project_id": "authlocker-987e2",
+    "storage_bucket": "authlocker-987e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114908354816:android:ba32a958c3aaef58a1bbe5",
+        "android_client_info": {
+          "package_name": "jp.co.unisys.authlocker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114908354816-pgm541qs9lbj174d3jf5ieapbpcfm665.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-WL9XlN53zuZRJ18Ei8YB4U5xk6GNNoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114908354816-pgm541qs9lbj174d3jf5ieapbpcfm665.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "114908354816-kd03m1iff47b750htdclim5q4e796jvd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.co.unisys.authlocker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        prd {
+            storeFile file('/Users/zhouchaoliang/Documents/PCVerification/app/test.jks')
+            storePassword '12345678'
+            keyAlias = 'key1'
+            keyPassword '12345678'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion '29.0.1'
+    defaultConfig {
+        applicationId "jp.co.unisys.authlocker"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1000019
+        versionName '1.0.19'
+    }
+    buildTypes {
+        debug {
+//            buildConfigField "String", "ADDR_GET_TOKEN", '"https://FrontDoor-prd.azurefd.net/api/TokenPublish/SmartPhone"'
+//            buildConfigField "String", "ADDR_GET_DATA", '"https://FrontDoor-prd.azurefd.net/api/UsageSettingFetch"'
+            buildConfigField "String", "ADDR_GET_TOKEN", '"http://10.10.132.99:8080/api/TokenPublish/SmartPhone"'
+            buildConfigField "String", "ADDR_GET_DATA", '"http://10.10.132.99:8080/api/UsageSettingFetch"'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "ADDR_GET_TOKEN", '"https://FrontDoor-prd.azurefd.net/api/TokenPublish/SmartPhone"'
+            buildConfigField "String", "ADDR_GET_DATA", '"https://FrontDoor-prd.azurefd.net/api/UsageSettingFetch"'
+        }
+        releaseStg {
+            buildConfigField "String", "ADDR_GET_TOKEN", '"https://FrontDoor-stg.azurefd.net/api/TokenPublish/SmartPhone"'
+            buildConfigField "String", "ADDR_GET_DATA", '"https://FrontDoor-stg.azurefd.net/api/UsageSettingFetch"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prd
+        }
+        releasePrd {
+            buildConfigField "String", "ADDR_GET_TOKEN", '"https://FrontDoor-prd.azurefd.net/api/TokenPublish/SmartPhone"'
+            buildConfigField "String", "ADDR_GET_DATA", '"https://FrontDoor-prd.azurefd.net/api/UsageSettingFetch"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prd
+        }
+        releaseTst {
+            buildConfigField "String", "ADDR_GET_TOKEN", '"https://FrontDoor-tst.azurefd.net/api/TokenPublish/SmartPhone"'
+            buildConfigField "String", "ADDR_GET_DATA", '"https://FrontDoor-tst.azurefd.net/api/UsageSettingFetch"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prd
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation project(path: ':convenient')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation files('libs/convenient.jar')
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:16.1.0'
+    implementation 'androidx.biometric:biometric:1.0.1'
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'com.google.android.material:material:1.0.0'
+    api 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
+//    implementation 'com.google.firebase:firebase-core:17.0.0'
+}
